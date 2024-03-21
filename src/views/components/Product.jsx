@@ -5,16 +5,20 @@ import String from "../util/InpUtil";
 import "./styles/product.scss";
 // import product from "../util/ProductUtil";
 import CustomButton from "./CustomButton";
-
+import { useNavigate } from "react-router-dom";
 import Property from "../util/Buttonprop";
 // import MenuBar from "./MenuBar";
 
 const Product = () => {
+  const nav = useNavigate()
+  function back(){
+     nav("/admin")
+  }
   return (
     <div className="admin">
       <form className="forum" action="post">
-        <div className="admin-first-child">
-          <p>&larr;</p><br />
+        <div className="admin-first-child" >
+          <p onClick={back} style={{ "fontSize": "xxx-large" }}>&larr;</p>
           <h2>Add product</h2>
         </div>
         <div className="common-styling">
@@ -28,7 +32,7 @@ const Product = () => {
             <textarea name="description" />
           </div>
         </div>
-        <div className="common-styling">
+        <div className="common-styling sub-section media">
           <Inp
             placeholder={String.placeholder_media}
             icon={String.iconUsers}
@@ -36,7 +40,7 @@ const Product = () => {
           />
         </div>
         <div className="common-styling price">
-          <div className="price-section">
+          <div className="price-section sub-section">
             <h2>Pricing</h2>
           </div>
           <div className="price-section">
@@ -52,9 +56,7 @@ const Product = () => {
               icon={String.iconUsers}
               type={String.typeNumber}
             />
-            <span><input type="checkbox" value="" />Charge Tax on this product</span>
-
-
+            <span><input type="checkbox" value="" />Tax&nbsp;(GST)</span>
           </div>
           <div className="price-section">
             <Inp
@@ -92,7 +94,7 @@ const Product = () => {
             />
           </div>
         </div>
-        <CustomButton type={Property.type} value={Property.addProductContent}/>
+        <CustomButton type={Property.type} value={Property.addProductContent} />
       </form>
     </div>
   );
