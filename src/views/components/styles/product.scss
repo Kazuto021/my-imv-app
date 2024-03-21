@@ -1,102 +1,209 @@
-// .admin-wrapper-class{
-//     background-color: black;
-//     height: 100dvh;
-//     color: white;
-// }
-// .Products input{
-//     border:2px solid red;
-// }
-// .Products input::placeholder{
-//    color: black;
-// }
 
-// .product-div{
-//     border: 3px solid gold;
-//     margin-bottom: 1rem;
-//     color: white;
-// }
-
-.admin {
-  // background-color: black;
- width: 100%;
-  .forum{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-    border: 2px solid green;
-    // padding: 1rem;
-    height: 100%;
-    width: 100%;
-    row-gap: 1rem;
-    overflow: scroll;
-    .admin-first-child {
-      width: 90%;
-      // border: 1px solid red;
-      padding: 0;
-      border: none;
-      font-size: larger;
-    }
-    
-    legend {
-      font-weight: 600;
-    }
-    
-    // .inp-container{
-    //   border:2px solid gold;
-    // }
-    input {
-      border: 1px solid black;
-      width: 95%;
-      font-size: large  ;
-    }
-    input:focus {
-      border: none;
-      outline: 0.2rem solid gold;
-    }
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    div textarea {
-      border-radius: 20px;
-      width: 95%;
-      min-width: 20%;
-      max-width: 95%;
-      min-height: 4rem;
-      max-height: 15rem;
-      padding: 1rem;
-      font-size: 1rem;
-      font-weight: 200;
-      overflow: scroll;
-    }
-    div textarea::-webkit-scrollbar {
-      display: none;
-    }
-    .price-section {
-      span {
-        padding: 1rem;
-        width: 20%;
-        display: flex;
-        input {
-          width: 80%;
-        }
-      }
-    }
-    .price-section span input:focus {
-      outline: none;
-    }
-  }
-  .forum > div {
+@media (min-width:320px) and (max-width:481px) {
+  .admin {
     padding: 1rem;
-    width: 90%;
-    border: 1px solid black;
-    border-radius: 1rem;
-  }
-  .forum > .common-styling{
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  }
+    width: 100%;
+     .forum{
+       color: black;
+       display: flex;
+       flex-direction: column;
+       justify-content: baseline;
+       align-items: center;
+       border: 4px double green;
+       // padding: 1rem;
+       height: 100%;
+       width: 100%;
+       row-gap: 1rem;
+       overflow: scroll;
+       .admin-first-child {
+          display: flex;
+          align-items: center;
+         width: 90%;
+          
+         padding: 0;
+         border: none;
+         font-size: larger;
+         p{
+          border: 1px solid black;
+          // max-width: 3rem;
+          // max-height: 5rem;
+          // margin-top: -2rem;
+          // border-radius: 100%;
+         }
+         h2{
+          margin: 2rem 0rem 1rem 1rem;
+         }
+
+       }
+       .common-styling{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+       }
+       
+       legend {
+         font-weight: 600;
+         margin-bottom:0.5rem;
+       }
+       
+       input {
+         border: 1px solid black;
+         width: 95%;
+         font-size: large  ;
+         padding:0.5rem;
+       }
+       input:focus {
+         border: none;
+         outline: 0.2rem solid gold;
+       }
+       input::-webkit-outer-spin-button,
+       input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+       }
+       
+       div textarea {
+         border-radius: 20px;
+         width: 95%;
+         min-width: 20%;
+         max-width: 95%;
+         min-height: 4rem;
+         max-height: 15rem;
+         padding: 1rem;
+         margin-top: -0.5rem;
+         font-size: 1rem;
+         font-weight: 200;
+         overflow: scroll;
+       }
+       div textarea::-webkit-scrollbar {
+         display: none;
+       }
+       .price-section {
+         margin:0.2rem;
+         span {
+           padding-top: 0.8rem;
+           width:45%;
+           display: flex;
+           input {
+             width: 80%;
+           }
+         }
+       }
+       .price-section span input:focus {
+         outline: none;
+       }
+       .sub-section{
+         text-align: center;
+       }
+       .media input{
+        margin-top: -1rem;
+        width:100%;
+        padding:1rem;
+       }
+     }
+     .forum > div {
+       padding: 1rem;
+       width: 90%;
+       border: 1px solid black;
+       border-radius: 1rem;
+     }
+     .forum > .common-styling{
+       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+     }
+   }
 }
 
+@media (min-width:481px) {
+
+  .admin {
+
+    width: 100%;
+     .forum{
+       color: black;
+       display: flex;
+       flex-direction: column;
+       justify-content: baseline;
+       align-items: center;
+       border: 2px solid green;
+       // padding: 1rem;
+       height: 100%;
+       width: 100%;
+       row-gap: 1rem;
+       overflow: scroll;
+       .admin-first-child {
+         width: 90%;
+         // border: 1px solid red;
+         padding: 0;
+         border: none;
+         font-size: larger;
+         p:hover{
+          cursor: pointer;
+         }
+       }
+       
+       legend {
+         font-weight: 600;
+       }
+       
+       input {
+         border: 1px solid black;
+         width: 95%;
+         font-size: large  ;
+       }
+       input:focus {
+         border: none;
+         outline: 0.2rem solid gold;
+       }
+       input::-webkit-outer-spin-button,
+       input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+       }
+       div textarea {
+         border-radius: 20px;
+         width: 95%;
+         min-width: 20%;
+         max-width: 95%;
+         min-height: 4rem;
+         max-height: 15rem;
+         padding: 1rem;
+         font-size: 1rem;
+         font-weight: 200;
+         overflow: scroll;
+       }
+       div textarea::-webkit-scrollbar {
+         display: none;
+       }
+       .price-section {
+         margin:1rem;
+         // border: 1px solid red;
+         span {
+           padding: 1rem;
+           width:45%;
+           display: flex;
+           input {
+             width: 80%;
+           }
+         }
+       }
+       .price-section span input:focus {
+         outline: none;
+   
+       }
+       .price-section span input:focus 
+       .sub-section{
+         text-align: center;
+       }
+     }
+     .forum > div {
+       padding: 1rem;
+       width: 90%;
+       border: 1px solid black;
+       border-radius: 1rem;
+     }
+     .forum > .common-styling{
+       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+     }
+   }
+   
+}
