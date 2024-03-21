@@ -1,0 +1,11 @@
+.menu-item * {
+  margin: 0.2rem;
+  font-weight: 100;
+  font-size: 1.2rem;
+}
+.menu-item img {
+  height: 2rem;
+}
+.menu-item:hover {
+  cursor: pointer;
+}

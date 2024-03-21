@@ -1,0 +1,62 @@
+$baseurl: "../../../assets/"; // defining a custom variable in SCSS using "$" , in css just use "--baseurl"
+$login-bgD:"bg.webp";
+$signup-bgD:"signup_bg.webp";
+$login-mobile-bg:"lessreso3.webp";
+$signup-mobile-bg:"lessreso4.webp";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.signup-wrapper-class,.login-wrapper-class {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url($baseurl + $login-bgD);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .signup-form ,.login-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em;
+    // background: transparent;
+    // place-content: center;
+    row-gap: 0.8rem;
+    color: white;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .signup-form *,.login-form *{
+    color: white;
+  }
+  .signup{
+    cursor: pointer;
+  }
+ 
+}
+.signup-wrapper-class{
+  background-image: url($baseurl + $login-bgD);
+}
+
+.login-wrapper-class{
+  background-image: url($baseurl + $signup-bgD);
+}
+@media (max-width: 912px) {
+  .signup-wrapper-class{
+    // background-image: url("../../../assets/lessreso.jpeg");
+    background-image: url($baseurl+$signup-mobile-bg);
+  }
+  .login-wrapper-class {
+    background-image: url($baseurl+$login-mobile-bg);
+  }
+}
