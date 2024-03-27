@@ -19,7 +19,12 @@ const String = {
   "placeholder_productPrice" : "price" ,
   "typeTextArea": "textarea",
   "placeholder_media": "Media",
-  "typefile": "file"
+  "typeImage":"image",
+  "typeCheckBox": "checkbox",
+  "typefile": "file",
+
+
+  "editImage": "src/assets/edit.png"
 }
 
 export default String

@@ -16,7 +16,7 @@ const ProductScreen = () => {
       <MenuBar/>
       <Product/>
     </div>
-
+    
   );
 };
 
