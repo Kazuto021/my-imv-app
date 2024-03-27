@@ -94,7 +94,7 @@ const Product = () => {
             />
           </div>
         </div>
-        <CustomButton type={Property.type} value={Property.addProductContent} />
+        <CustomButton type={Property.type} value={Property.addProductContent} onClick=""/>
       </form>
     </div>
   );

@@ -7,9 +7,11 @@ import Admin from './views/screen/Admin.jsx'
 // import Product from './views/components/Product.jsx'
 import ProductScreen from "./views/screen/ProductScreen.jsx"
 import Nav2 from "./views/components/Nav2.jsx"
+
 import './index.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import InventoryScreen from './views/screen/InventoryScreen.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -20,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/admin' Component={Admin } />
       <Route path='/product' Component={ProductScreen} />
       <Route path='/testing' Component={Nav2} />
+      <Route path='/inventory' Component={InventoryScreen} />
     </Routes>
   </BrowserRouter>
 )
