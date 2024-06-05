@@ -2,12 +2,12 @@ import React from 'react'
 import "./styles/inventory.scss"
 import Inp from './Inp'
 import String from '../util/InpUtil'
-Inp
+
 const InventoryItem = (props) => {
     return (
-        <div className="invItem">
+        <div className="invItem" >
             <div className="subproperties">
-                <Inp type={String.typeCheckBox} />
+                <Inp type={String.typeCheckBox}/>
             </div>
             <div className="subproperties container-img-name">
                 <Inp type={String.typeImage} src={props.productImg}/>

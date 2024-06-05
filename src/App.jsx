@@ -16,6 +16,7 @@ function App() {
   return (
     <div className='app'>
       <h1>Hello</h1>
+      
       <button type="button" onClick={loginHook} value="login">Take me to Login.</button><br />
       <button type="button" onClick={adminHook} value="admin">Take me to Admin Page</button>
     </div>

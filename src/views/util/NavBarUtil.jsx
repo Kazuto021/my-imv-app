@@ -1,3 +1,3 @@
 export const NavProps={
-   CompanyName:"Seldom India" 
+   CompanyName:"Jainson Corp" 
 }

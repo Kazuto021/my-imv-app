@@ -1,3 +1,4 @@
+// import "../../assets/lessreso.jpeg"
 const product = {
     name:"Laptop",
     price:"50000",

@@ -1,8 +1,8 @@
 $baseurl: "../../../assets/"; // defining a custom variable in SCSS using "$" , in css just use "--baseurl"
-$login-bgD:"bg.webp";
-$signup-bgD:"signup_bg.webp";
-$login-mobile-bg:"lessreso3.webp";
-$signup-mobile-bg:"lessreso4.webp";
+$login-bgD:"login2.jpg";
+$signup-bgD:"dark.jpg";
+$login-mobile-bg:"abstract2.jpg";
+$signup-mobile-bg:"Book.jpg";
 
 * {
   padding: 0;
@@ -50,6 +50,21 @@ $signup-mobile-bg:"lessreso4.webp";
 
 .login-wrapper-class{
   background-image: url($baseurl + $signup-bgD);
+}
+input{
+  border: 1px solid white;
+  padding: .8em;
+  text-align: center;
+  border-radius: 20px;
+  // border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1.2rem;
+  // padding: 0.3em;  
+}
+input::placeholder{
+  // font-size: larger;
+  color:white;
 }
 @media (max-width: 912px) {
   .signup-wrapper-class{

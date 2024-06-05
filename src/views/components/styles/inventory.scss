@@ -1,6 +1,6 @@
 .invItem {
   // height: 10dvh;
-  padding: 0.2rem;
+  padding: 1rem;
   width: 100%;
   display: flex;
   // overflow-x: scroll;
@@ -10,7 +10,17 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+    input[type=checkbox]{
+      border: 1px solid black;
+      transform: scale(1.5);
+      // min-width: 2rem;
+    }
+    // input[type=image]{
+    //   display: none;
+    // }
+    // input:not(:checked) ~ input[type=image]{
+    //   display: none;
+    // }
     .inp-container {
       legend{
         display: none;
@@ -38,6 +48,9 @@
       text-wrap: nowrap;
     }
     
+  }
+  .subproperties>input:checked ~ div>input[type=image]  {
+    display: block;
   }
   .container-img-name {
     // padding: 1rem;
