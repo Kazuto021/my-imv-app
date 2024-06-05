@@ -68,7 +68,9 @@ const Login = () => {
                 {/* <Inp placeholder={String.placeholder_username} value={username} onchange={d=>setUserName(d.target.value)} icon={String.iconUsers} type={String.type}/> */}
                 {/* <Inp placeholder={String.placeholder_pass} icon={String.iconPassword} type={String.typePassword} required/> */}
                 <CustomButton type={Property.typeButton} fontColor={Property.fontColor} value={Property.buttonContent} onClickLogin={loginChecker} />
-                <div className='signup' onClick={signupHook}>New around here? <br /><span>Signup</span></div>
+                <div className='signup' onClick={signupHook}>New around here? <br /><span style={{"textDecoration":"underline",color:"blue",
+                    "letterSpacing":"0.1em"
+                }}>Signup</span></div>
             </form>
         </div>
     )

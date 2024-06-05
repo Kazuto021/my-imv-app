@@ -57,6 +57,7 @@
         background-repeat: no-repeat;
         border-radius: 10px;
         
+        
     }
     .stock-info{
         display: flex;
@@ -96,6 +97,9 @@
     letter-spacing: 0.1rem;
     word-spacing: 0.2em;
     outline: 0px 0px 3px 0px;
+    .card-img-holder{
+        border:2px dashed black;
+    }
 }
 // .cards *{
 //     text-align: center;
