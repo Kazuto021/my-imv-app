@@ -4,6 +4,13 @@ import "./styles/ProductCards.scss"
 const ProductCards = (props) => {
     const baseAddress = "../../assets/"
     const myColor = "red"
+    const activateFluidFill = (e) => {
+        // console.log(e)
+        console.log(e.target.parentElement)
+        
+        const recurse=(e)=>{console.log("something")}
+        recurse(e)
+    }
     return (
 
         // <div className='card'>
@@ -21,7 +28,7 @@ const ProductCards = (props) => {
         //     </div>
         //     <h3>Total:</h3>
         // </div>
-        <div className='card' key={props.uniqueKey}>
+        <div className='card' id={props.uniqueKey} key={props.uniqueKey} onClick={activateFluidFill} >
             <h2>{props.name}</h2>
             <div className='card-img-holder'
                 style={
