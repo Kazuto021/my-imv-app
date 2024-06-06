@@ -13,10 +13,10 @@ export const itemProps= [
     {
         id:2,
         name:"Wine & Ash Grey Cotton Pants Combo",
-        sold:1000,
-        commited: 1200,
-        remaining:100,
-        others:200, 
+        sold:1,
+        commited: 5,
+        remaining:3,
+        others:9, 
         // img:`lessreso2.jpg`
         img:`https://www.besolid.in/cdn/shop/files/Wine_AshGrey.jpg?v=1702893307&width=713`
     },
@@ -46,5 +46,41 @@ export const itemProps= [
         remaining:100,
         others:200, 
         img:`ask.jpeg`
+    },
+    {
+        id:6,
+        name:"Koe no Katachi",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600`
+    },
+    {
+        id:7,
+        name:"Koe no Katachi",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600`
+    },
+    {
+        id:8,
+        name:"Coca Cola",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=600`
+    },
+    {
+        id:9,
+        name:"Coca Cola",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
     },
 ]
