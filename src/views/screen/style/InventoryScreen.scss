@@ -58,7 +58,7 @@
     }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 950px) and (max-width:1400px) {
     .inventory-wrapper {
         // height: 100vh; // Adjust height for smaller screens
         overflow-y: auto; // Ensure it scrolls if content overflows
@@ -67,6 +67,19 @@
             width: 100vw;
             // border:1px solid white;
             grid-template-columns: repeat(3,1fr); // Change to single column layout on smaller screens
+            padding: 1rem; // Added padding for better spacing
+        }
+    }
+}
+@media (min-width:1401px) {
+    .inventory-wrapper {
+        // height: 100vh; // Adjust height for smaller screens
+        overflow-y: auto; // Ensure it scrolls if content overflows
+
+        .inventory-list {
+            width: 100vw;
+            // border:1px solid white;
+            grid-template-columns: repeat(4,1fr); // Change to single column layout on smaller screens
             padding: 1rem; // Added padding for better spacing
         }
     }

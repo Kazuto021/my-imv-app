@@ -1,6 +1,6 @@
 const UserProp={
     Username:"Kshitiz",
-    Status:"Online",
+    Status:"Offline",
     leftScale:'1',
     Height: "5rem",
     width: "7.5rem",

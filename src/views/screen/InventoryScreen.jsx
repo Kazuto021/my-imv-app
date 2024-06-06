@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuBar from '../components/MenuBar'
 import "./style/InventoryScreen.scss"
-import InventoryItem from '../components/InventoryItem'
+// import InventoryItem from '../components/InventoryItem'
 import { itemProps } from '../util/InvItemUtil'
 import ProductCards from '../components/ProductCards'
 
