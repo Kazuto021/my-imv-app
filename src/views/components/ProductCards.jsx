@@ -1,35 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./styles/ProductCards.scss"
+import { useNavigate } from 'react-router-dom';
 // import "../../assets/lessreso.jpeg"
 const ProductCards = (props) => {
-    const baseAddress = "../../assets/"
-    const myColor = "red"
-    const activateFluidFill = (e) => {
-        // console.log(e)
-        console.log(e.target.parentElement)
-        
-        const recurse=(e)=>{console.log("something")}
-        recurse(e)
+    const nav = useNavigate()
+    const [data,setData] = useState({
+        key: props.uniqueKey,
+        name:props.name,
+        bgImg:props.bgImg,
+        sold: props.sold,
+        commited: props.commited,
+        remaining: props.remaining,
+        others: props.others
+    });
+    useEffect(()=>{
+        console.table(data)
+    },[])
+    const onClickPrintData = (e)=>{
+        nav("/ProductDetails",{state:{data}})
+        console.log(e)
     }
+    // const activateFluidFill = (e) => {
+    //     // console.log(e)
+    //     console.log(e.target.parentElement)
+        
+    //     const recurse=(e)=>{console.log("something")}
+    //     recurse(e)
+    // }
     return (
-
-        // <div className='card'>
-        //     <h2>Kimetsu no Yaiba: Hashira Training Arcaaaaaaaaaaaaaaaaa</h2>
-        //     <div className='card-img-holder'></div>
-        //     <div className="stock-info">
-        //         <div className='info-left'>
-        //             <div>Sold:1000</div>
-        //             <div>Commited:1200</div>
-        //         </div>
-        //         <div className='info-right'>
-        //             <div>Remaning:100</div>'
-        //             <div>Others:20000000000000000000000000000</div>
-        //         </div>
-        //     </div>
-        //     <h3>Total:</h3>
-        // </div>
-        <div className='card' id={props.uniqueKey} key={props.uniqueKey} onClick={activateFluidFill} >
-            <h2>{props.name}</h2>
+        <div className='card' id={props.uniqueKey} key={props.uniqueKey} onClickCapture={onClickPrintData} >
+            <h2>{(props.name).toUpperCase()}</h2>
             <div className='card-img-holder'
                 style={
                     {

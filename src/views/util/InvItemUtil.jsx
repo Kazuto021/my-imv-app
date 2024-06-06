@@ -40,7 +40,7 @@ export const itemProps= [
     },
     {
         id:5,
-        name:"My hero academia",
+        name:"Neon",
         sold:1000,
         commited: 1200,
         remaining:100,
@@ -54,7 +54,7 @@ export const itemProps= [
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600`
+        img:`lessreso6.jpeg`
     },
     {
         id:7,
@@ -82,5 +82,23 @@ export const itemProps= [
         remaining:100,
         others:200, 
         img:`https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+    },
+    {
+        id:10,
+        name:"Coca Cola",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+    },
+    {
+        id:11,
+        name:"Coca Cola",
+        sold:1000,
+        commited: 1200,
+        remaining:100,
+        others:200, 
+        img:`cardd.jpeg`
     },
 ]

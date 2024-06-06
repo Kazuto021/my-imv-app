@@ -9,5 +9,5 @@ export const menuItemProperties = {
     productPage: "product",
     inventoryPage:"inventory",
     remainingStockPage: "remaining-stock",
-    managementPage:"mgt"
+    managementPage:"ProductDetails"
 }
