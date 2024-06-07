@@ -63,34 +63,34 @@ export const itemProps= [
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02242.jpg?v=1698915070&width=713`
     },
     {
         id:8,
-        name:"Coca Cola",
+        name:"Crimson Red Bell Bottom Pants",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://images.pexels.com/photos/3819969/pexels-photo-3819969.jpeg?auto=compress&cs=tinysrgb&w=600`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02285.jpg?v=1698649294&width=713`
     },
     {
         id:9,
-        name:"Coca Cola",
+        name:"BLACK Cotton Pants",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02483.jpg?v=1704273860&width=713`
     },
     {
         id:10,
-        name:"Coca Cola",
+        name:"Bottle Green Cotton Pant",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02684.jpg?v=1704273498&width=713`
     },
     {
         id:11,
@@ -99,6 +99,6 @@ export const itemProps= [
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`cardd.jpeg`
+        img:`https://www.koskii.com/cdn/shop/files/koskii-lavender-stonework-satin-designer-saree-saus0032726_lavender_multi_1_1_1800x1800.jpg?v=1706605789`
     },
 ]
