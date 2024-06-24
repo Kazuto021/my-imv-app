@@ -37,7 +37,7 @@ const ProductCards = (props) => {
                         backgroundImage: `url(${props.bgImg})`
 
                     }}>
-
+                
             </div>
             <div className="stock-info">
                 <div className='info-left'>
@@ -53,6 +53,6 @@ const ProductCards = (props) => {
             <h3>Total:{props.sold + props.remaining + props.commited + props.others}</h3>
         </div>
     )
-}
-
+}   
+ 
 export default ProductCards

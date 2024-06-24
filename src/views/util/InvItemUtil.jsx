@@ -2,7 +2,7 @@ const baseAddress = "../../assets/"
 export const itemProps= [
     {
         id:1,
-        name:"Summer Green Linen Kurti Set",
+        name:"Summer Green Linen Kurti Setttttttttttttttttttttttttttttttttt",
         sold:1000,
         commited: 1200,
         remaining:100,
@@ -22,21 +22,21 @@ export const itemProps= [
     },
     {
         id:3,
-        name:"My hero academia",
+        name:"Yellow & Orange Buta Short Kurti Combo",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`109299472_p0.png`
+        img:`https://www.besolid.in/cdn/shop/files/Yellow_Orange.jpg?v=1711968367&width=713`
     },
     {
         id:4,
-        name:"My hero academia",
+        name:"Brick Red Airy Linen Long Kurti",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`118143641_p0.jpg`
+        img:`https://www.besolid.in/cdn/shop/files/023A1376.webp?v=1714992642&width=713`
     },
     {
         id:5,
@@ -49,21 +49,21 @@ export const itemProps= [
     },
     {
         id:6,
-        name:"Koe no Katachi",
+        name:"Rose Taupe Airy Linen Long Kurti",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`lessreso6.jpeg`
+        img:`https://www.besolid.in/cdn/shop/files/023A1415.jpg?v=1714734586&width=713`
     },
     {
         id:7,
-        name:"Koe no Katachi",
+        name:"Navy Blue Cotton Pant",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02242.jpg?v=1698915070&width=713`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02731.jpg?v=1704273834&width=713`
     },
     {
         id:8,

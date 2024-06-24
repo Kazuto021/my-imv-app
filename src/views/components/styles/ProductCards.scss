@@ -14,7 +14,7 @@
 
     // filter: grayscale(1);
 
-    scale: 0.7;
+    scale: 0.8;
 
     outline-width: 1px;
     border-radius: 25px;
@@ -27,6 +27,7 @@
     transition: 0.8s;
     cursor: pointer;
     overflow: hidden;
+    // backdrop-filter: blur(100px);
     
     z-index: 0;
     h2{
@@ -117,6 +118,7 @@
     // overflow: visible;
     overflow: none;
     filter: saturate(1.5);
+
     
     
 }
@@ -138,7 +140,7 @@
     background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
     // opacity: 0;
     transition: 2s;
-    filter: grayscale(1);
+    filter: grayscale(0);
     
     // display: none;
 }
@@ -151,12 +153,13 @@
     // transition-delay: 0.2s;
     top: 0;
     scale: 1.5;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     filter: grayscale(0);
+    // filter: brightness(1);
     // display: block;
     box-shadow: -3px 2px 53px -2px rgba(255,255,255,0.64);
-    filter:blur(10px);
+    // filter:blur(10px);
 
 }
 
