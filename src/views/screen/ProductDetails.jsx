@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { redirect, useLocation, useNavigate } from 'react-router-dom';
+import { FaEdit } from "react-icons/fa";
+
 import "./style/ProductDetailsScreen.scss"
 const ProductDetails = () => {
+    let nav = useNavigate();
+    const [text, setText] = useState({
+        sold: "",
+        remaining: "",
+        commited: "",
+        others: ""
+    });
+    const [total, setTotal] = useState(0);
     const [loaded, setLoaded] = useState(false);
+    const [disabledStatus, setDisabledStatus] = useState(true);
     const [myData, setMyData] = useState(null); // Assuming the data is not an array initially
     const loc = useLocation();
 
@@ -13,17 +24,36 @@ const ProductDetails = () => {
             setLoaded(true);
         }
         console.table(loc.state)
+        console.log(myData)
     }, [loc.state]);
 
-    // useEffect(() => {
+    const inpStatusSetter = () => {
+        setDisabledStatus(false)
+    }
+    const textHandler = (e) => {
+        if (e.target.value >= 0) {
+            setText({
+                ...text,
+                [e.target.name]: e.target.value
+            }
+            )
+        }
 
-    //     if (loaded) {
-    //         console.log(myData);
-    //     }
-    // }, [myData, loaded]);
+    }
+    const submitHandler = (e) => {
+        e.preventDefault()
+        setDisabledStatus(true)
+        if (parseInt(text.sold) & parseInt(text.commited) & parseInt(text.remaining) & parseInt(text.others)) {
+            setTotal(parseInt(text.sold) + parseInt(text.commited) + parseInt(text.remaining) + parseInt(text.others))
+        }
+    }
 
     if (!loaded) {
-        return <div>Loading...</div>;
+        return (
+            <div>
+                Please Choose a product from <span style={{ color: "red", cursor: "pointer" }} onClick={() => nav("/inventory")}>inventory</span> page
+            </div>
+        );
     }
 
     return (
@@ -32,26 +62,42 @@ const ProductDetails = () => {
 
             <div className='product-detail-card'>
                 <div className='product-left-info flex-column'>
+                    <div className="blur-class"></div>
                     <div className="render-product-img" style={{ backgroundImage: `url(${myData.bgImg})` }} ></div>
-                    <h3>Total: {myData.sold + myData.commited + myData.remaining + myData.others}</h3>
+                    <h3>Total: {total === 0 ?
+                        (myData.sold + myData.commited + myData.remaining + myData.others)
+                        :
+                        (total)}</h3>
 
                 </div>
-
+                {/* {
+                    myData&&myData.map
+                } */}
                 <div className='product-right-info flex-column'>
                     <h2>{myData.name}</h2>
                     <div className='quantity-info'>
+                        <div className='edit flex'>
+                            <FaEdit onClick={inpStatusSetter} id='icon' />
+                        </div>
                         <form action="" className='flex-column'>
                             <span>
-                                <label for="sold">Sold:</label>
-                                <input id="sold" type="number" name="Hello" value={myData.sold} disabled />
+                                <label htmlFor="sold">Sold:</label>
+                                <input id="sold" type="number" name="sold" onChange={textHandler} placeholder={myData.sold} value={text.sold} disabled={disabledStatus} />
                             </span>
                             <span>
-                                <label for="remaining">Remaining:</label>
-                                <input id="remaining" type="number" name="Hello" value={myData.remaining} disabled />
+                                <label htmlFor="remaining">Remaining:</label>
+                                <input id="remaining" type="number" name="remaining" onChange={textHandler} placeholder={myData.remaining} value={text.remaining} disabled={disabledStatus} />
                             </span>
-                            <input id="commited" type="number" name="Hello" value={myData.commited} disabled />
-                            <input id="others" type="Number" name="Hello" value={myData.others} disabled />
-                            <button type='submit'>Save</button>
+                            <span>
+                                <label htmlFor="commited">Commited:</label>
+                                <input id="commited" type="number" name="commited" onChange={textHandler} placeholder={myData.commited} value={text.commited} disabled={disabledStatus} />
+
+                            </span>
+                            <span>
+                                <label htmlFor="others">Others:</label>
+                                <input id="others" type="Number" name="others" onChange={textHandler} placeholder={myData.others} value={text.others} disabled={disabledStatus} />
+                            </span>
+                            <button type='submit' onClick={submitHandler} disabled={disabledStatus}>Save</button>
                         </form>
                     </div>
                 </div>
@@ -61,4 +107,4 @@ const ProductDetails = () => {
     );
 }
 
-export default ProductDetails;
+export default ProductDetails
