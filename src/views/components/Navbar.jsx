@@ -52,9 +52,9 @@ const Navbar = (props) => {
                         {props.companyName}
                     </div>
                     <div className="inner-right-portion">
-                        <img src="src\\assets\\notification.png" alt="" />
+                        <img src="notif.png" alt="" />
                         <img src="src\\assets\\help.png" alt="" />
-                        <img src="src\\assets\\mail.png" alt="" />
+                        <img src="mail.png" alt="" />
                     </div>
                 </div>
             </div>
