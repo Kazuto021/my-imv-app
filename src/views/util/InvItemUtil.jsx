@@ -76,7 +76,7 @@ export const itemProps= [
     },
     {
         id:9,
-        name:"BLACK Cotton Pants",
+        name:"Black Cotton Pants",
         sold:1000,
         commited: 1200,
         remaining:100,

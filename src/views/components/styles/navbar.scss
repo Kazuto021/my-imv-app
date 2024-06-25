@@ -63,10 +63,11 @@
     }
   }
   // .right-portion,
-  // .inner-right-portion {
+  .inner-right-portion * {
   //   // width: 24%;
-  //   // border: 1px solid white;
-  // }
+    border: 1px solid white;
+    border-radius: 5px;
+  }
   .right-portion {
     max-width: 15vw;
     background-color: #ff5722;

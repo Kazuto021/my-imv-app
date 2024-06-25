@@ -29,7 +29,7 @@ const Signup = () => {
             email: "",
             password: "",
         })
-        nav("/login")
+        nav("/")
     }
     const formUpdater = (e) => {
         setFormData({
