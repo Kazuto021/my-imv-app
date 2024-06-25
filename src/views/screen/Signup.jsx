@@ -15,7 +15,7 @@ const Signup = () => {
         password: "",
     })
     const navigating = () => {
-        nav("/login")
+        nav("/")
     }
     function onClicksignup(e) {
         for (var key in formData) {
