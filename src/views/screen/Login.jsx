@@ -5,7 +5,7 @@ import CustomButton from '../components/CustomButton'
 // import "../components/styles/login.scss"
 import Property from '../util/Buttonprop'
 import { useNavigate } from "react-router-dom"
-import { useState } from "react"
+import { useState  } from "react"
 
 const Login = () => {
     const nav = useNavigate()
@@ -32,7 +32,7 @@ const Login = () => {
                             password: "",
                             logStatus: true
                         })
-                        prompt("You have succesfully logged in!")
+                        alert("You have succesfully logged in!")
                         nav("/admin")
                         localStorage.setItem("isLoggedIn", true)
                     }

@@ -50,7 +50,7 @@ const ProductDetails = () => {
 
     if (!loaded) {
         return (
-            <div>
+            <div className='render-empty'>
                 Please Choose a product from <span style={{ color: "red", cursor: "pointer" }} onClick={() => nav("/inventory")}>inventory</span> page
             </div>
         );

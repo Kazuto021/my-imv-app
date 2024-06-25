@@ -1,3 +1,21 @@
+.render-empty{
+  font-size: 5em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-wrap: pretty;
+  word-wrap: break-word;
+  // border: 1px solid green;
+  // justify-content: center;
+  // align-items: center;
+  // word-break: break-all;
+  text-align: center;
+}
 .detail-wrapper {
   height: 100dvh;
   max-height: 100dvh;

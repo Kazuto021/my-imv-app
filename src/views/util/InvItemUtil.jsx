@@ -94,11 +94,11 @@ export const itemProps= [
     },
     {
         id:11,
-        name:"Coca Cola",
+        name:"White & Navy Blue & Dark Grey Cotton Pants Combo",
         sold:1000,
         commited: 1200,
         remaining:100,
         others:200, 
-        img:`https://www.koskii.com/cdn/shop/files/koskii-lavender-stonework-satin-designer-saree-saus0032726_lavender_multi_1_1_1800x1800.jpg?v=1706605789`
+        img:`https://www.besolid.in/cdn/shop/files/White_NB_DGR.jpg?v=1712996711&width=713`
     },
 ]
