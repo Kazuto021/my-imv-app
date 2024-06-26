@@ -41,20 +41,20 @@ const Navbar = (props) => {
     return (
         <div className="navbar">
             <div className="left-portion" onClick={hamBurger}>
-                <img src="src\\assets\\hamburger.png" alt="" />
+                <img src="hamburger.png" alt="" />
             </div>
             <div className="mid-portion">
                 <div className="navbar">
                     <div className="inner-left-portion">
-                        <img className="co-logo" src="src\assets\JainsonCorp.png" alt="" />
+                        <img className="co-logo" src="JainsonCorp.png" alt="" />
                     </div>
                     <div className="inner-mid-portion">
                         {props.companyName}
                     </div>
                     <div className="inner-right-portion">
-                        <img src="notif.png" alt="" />
-                        <img src="src\\assets\\help.png" alt="" />
-                        <img src="mail.png" alt="" />
+                        <img src="notif.png" title="alerts" alt="" />
+                        <img src="src\\assets\\help.png" title="help" alt="" />
+                        <img src="mail.png" alt="" title="gmail"/>
                     </div>
                 </div>
             </div>

@@ -5,18 +5,25 @@ import "../components/styles/MenuBar.scss"
 import Profile from "./Profile"
 import MenuItem from "./MenuItem"
 
-import {menuItemProperties} from "../util/MenuItemUtil"
+import { menuItemProperties } from "../util/MenuItemUtil"
 import UserProp from '../util/UserProfile'
+import { useNavigate } from 'react-router-dom'
 
-UserProp
+import { LuLogOut } from "react-icons/lu";
+
 const MenuBar = () => {
+    const nav = useNavigate()
+    const logOutUser = ()=>{
+        localStorage.setItem("isLoggedIn","false")
+
+        nav("/")
+        alert("You have successfuly logged out")
+    }
     return (
         <div className="left">
             <Profile StatusRequirement={UserProp.leftSideProfileStatus} scale={UserProp.leftScale} />
-
-            <div className="second-left-element">General</div>
-
             <div className="menu">
+                <div className="second-left-element">General</div>
                 <a target="_self">
                     <MenuItem
                         source={menuItemProperties.productLogo}
@@ -39,6 +46,11 @@ const MenuBar = () => {
                     content={menuItemProperties.managementContent}
                     componentCalled={menuItemProperties.managementPage}
                 />
+            </div>
+
+            <div className='logout' onClick={logOutUser}>
+                <div>Logout</div>
+                <LuLogOut className='logout-icon'/>
             </div>
         </div>
     )
