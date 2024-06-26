@@ -43,9 +43,27 @@ const ProductDetails = () => {
     const submitHandler = (e) => {
         e.preventDefault()
         setDisabledStatus(true)
-        if (parseInt(text.sold) & parseInt(text.commited) & parseInt(text.remaining) & parseInt(text.others)) {
-            setTotal(parseInt(text.sold) + parseInt(text.commited) + parseInt(text.remaining) + parseInt(text.others))
+        let cumSum = 0
+        for (let i in text) {
+            console.log(i + " " + text[i])
+            if (text[i] === "") {
+                setText({
+                    ...text,
+                    i: myData[i]
+
+                })
+                console.log(myData[i])
+                cumSum += parseInt(myData[i])
+            } else {
+                cumSum += parseInt(text[i])
+            }
         }
+        if (parseInt(text.sold) & parseInt(text.commited) & parseInt(text.remaining) & parseInt(text.others)) {
+            console.log("if condition working   ")
+            
+            // setTotal(parseInt(text.sold) + parseInt(text.commited) + parseInt(text.remaining) + parseInt(text.others))
+        }
+        setTotal(cumSum)
     }
 
     if (!loaded) {
