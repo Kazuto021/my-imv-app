@@ -14,6 +14,7 @@ import ProductDetails from '../screen/ProductDetails.jsx'
 // import './index.css'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import RemainingStock from '../screen/RemainingStock.jsx'
 
 const MainRoutes = () => {
   return (
@@ -26,7 +27,9 @@ const MainRoutes = () => {
       <Route path='/product' Component={ProductScreen} />
       <Route path='/testing' Component={Nav2} />
       <Route path='/inventory' Component={InventoryScreen} />
-      <Route path='/ProductDetails' Component={ProductDetails}></Route>
+      <Route path='/ProductDetails' Component={ProductDetails}/>
+      <Route path='/rm-stock' Component={RemainingStock}/>
+
     </Routes>
   </BrowserRouter>
   )

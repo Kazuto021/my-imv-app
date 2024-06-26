@@ -60,9 +60,8 @@ const Login = () => {
     }
     
     // if(localStorage.getItem("isLoggedIn"))
-    // if (LogChecker() === "false") {
+    if (LogChecker() === "false" || LogChecker() === null) {
         return (
-
             <div className='login-wrapper-class'>
                 <form className='login-form'>
                     <h1>Login</h1>
@@ -80,11 +79,15 @@ const Login = () => {
                 </form>
             </div>
         )
-    // }
-    // else if(LogChecker()==="true"){
-    //     alert("You are already logged in..")
+    }
+    else if(LogChecker()==="true"){
         
-    // }
+        alert("You are already logged in..")
+        setTimeout(()=>{
+            nav("/admin")
+        },1)
+        
+    }
 }
 
 export default Login
