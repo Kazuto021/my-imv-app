@@ -1,9 +1,9 @@
 export const menuItemProperties = {
-    productLogo:'src\\assets\\productList.png',
+    productLogo:'productList.png',
     productContent:"Products",
-    stockRemainingLogo:"src\\assets\\Remainingstock.png",
+    stockRemainingLogo:"Remainingstock.png",
     remainingStockContent: "Remaining Stock",
-    totalStockLogo :'src\\assets\\inventory.png',
+    totalStockLogo :'inventory.png',
     totalStockContent:"Inventory",  
     managementContent:"Management",  
     productPage: "product",
