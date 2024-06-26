@@ -8,19 +8,33 @@ import "./style/admin.scss";
 import "../components/styles/navbar.scss";
 // import Profile from "../components/Profile";
 import MenuBar from "../components/MenuBar";
-const Admin = () => {
-  return (
-    <div className="admin-wrapper-class">
-      <MenuBar/>
-      <div className="right">
-        <div className="navbar-top">
-          <Navbar companyName={NavProps.CompanyName} />
-        </div>
-        <div className="navbar-bottom">PRODUCTS</div>
-        <section className="user-information"></section>
-      </div>
-    </div>
-  );
-};
+import { useNavigate } from 'react-router-dom';
+import { LuLogOut } from "react-icons/lu";
 
+const Admin = () => {
+  const nav = useNavigate()
+  console.log(typeof localStorage.getItem("isLoggedIn"))
+  if(localStorage.getItem("isLoggedIn")==="true"){
+    return (
+      <div className="admin-wrapper-class">
+        <MenuBar/>
+        <div className="right">
+          <div className="navbar-top">
+            <Navbar companyName={NavProps.CompanyName} />
+          </div>
+          <div className="navbar-bottom">PRODUCTS</div>
+          <section className="user-information"></section>
+        </div>
+      </div>
+    );
+  }else{
+    return(
+      <div className='' style={{fontSize:"3rem"}} >
+        Please <span style={{color:'red',fontSize:"3rem",cursor:"pointer"}} onClick={()=>nav("/")}>Login/Register</span> first in order to start using Inventory Management App!
+      </div>
+    )
+
+  
+};
+}
 export default Admin;

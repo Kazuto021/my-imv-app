@@ -6,7 +6,7 @@ $profile-pic: "mypic01.jpg";
   width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: start;
   align-items: center;
   overflow: scroll;
   color: black;
@@ -18,9 +18,20 @@ $profile-pic: "mypic01.jpg";
   background-size: cover;
   color: white;
   animation-duration: 1s;
+  gap: 2rem;
   min-width: 20%;
   height: 100dvh;
+  
   // border-right: 5px solid white;
+  .logout{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    .logout-icon{
+      scale: 1.5;
+    }
+  }
 }
 .left::-webkit-scrollbar {
   display: none;

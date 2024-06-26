@@ -5,7 +5,8 @@ import CustomButton from '../components/CustomButton'
 // import "../components/styles/login.scss"
 import Property from '../util/Buttonprop'
 import { useNavigate } from "react-router-dom"
-import { useState  } from "react"
+import { useState } from "react"
+import LogChecker  from "../util/LogChecker"
 
 const Login = () => {
     const nav = useNavigate()
@@ -44,11 +45,11 @@ const Login = () => {
                 }
                 console.table(loginData)
             }
-            else{
+            else {
                 alert("Username does not exist, consider signing up.")
             }
         }
-        catch(e) {
+        catch (e) {
             console.table(e)
         }
         // nav("/admin")
@@ -57,23 +58,33 @@ const Login = () => {
     let signupHook = () => {
         nav("/signup")
     }
-    return (
-        <div className='login-wrapper-class'>
-            <form className='login-form'>
-                <h1>Login</h1>
-                <input onChange={formUpdater} type={String.typeText} name={String.placeholder_username} value={loginData.username} placeholder={String.placeholder_username} required />
-                <input type="password" name={String.placeholder_pass} value={loginData.password} onChange={formUpdater} placeholder={String.placeholder_pass} required />
+    
+    // if(localStorage.getItem("isLoggedIn"))
+    // if (LogChecker() === "false") {
+        return (
 
-                {/* <Inp placeholder={String.placeholder_username} icon={String.iconUsers} type={String.typeText} required/>
+            <div className='login-wrapper-class'>
+                <form className='login-form'>
+                    <h1>Login</h1>
+                    <input onChange={formUpdater} type={String.typeText} name={String.placeholder_username} value={loginData.username} placeholder={String.placeholder_username} required />
+                    <input type="password" name={String.placeholder_pass} value={loginData.password} onChange={formUpdater} placeholder={String.placeholder_pass} required />
+
+                    {/* <Inp placeholder={String.placeholder_username} icon={String.iconUsers} type={String.typeText} required/>
                 {/* <Inp placeholder={String.placeholder_username} value={username} onchange={d=>setUserName(d.target.value)} icon={String.iconUsers} type={String.type}/> */}
-                {/* <Inp placeholder={String.placeholder_pass} icon={String.iconPassword} type={String.typePassword} required/> */}
-                <CustomButton type={Property.typeButton} fontColor={Property.fontColor} value={Property.buttonContent} onClickLogin={loginChecker} />
-                <div className='signup' onClick={signupHook}>New around here? <br /><span style={{"textDecoration":"underline",color:"blue",
-                    "letterSpacing":"0.1em"
-                }}>Signup</span></div>
-            </form>
-        </div>
-    )
+                    {/* <Inp placeholder={String.placeholder_pass} icon={String.iconPassword} type={String.typePassword} required/> */}
+                    <CustomButton type={Property.typeButton} fontColor={Property.fontColor} value={Property.buttonContent} onClickLogin={loginChecker} />
+                    <div className='signup' onClick={signupHook}>New around here? <br /><span style={{
+                        "textDecoration": "underline", color: "blue",
+                        "letterSpacing": "0.1em"
+                    }}>Signup</span></div>
+                </form>
+            </div>
+        )
+    // }
+    // else if(LogChecker()==="true"){
+    //     alert("You are already logged in..")
+        
+    // }
 }
 
 export default Login
