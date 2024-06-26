@@ -53,7 +53,7 @@ const Navbar = (props) => {
                     </div>
                     <div className="inner-right-portion">
                         <img src="notif.png" title="alerts" alt="" />
-                        <img src="src\\assets\\help.png" title="help" alt="" />
+                        <img src="help.png" title="help" alt="" />
                         <img src="mail.png" alt="" title="gmail"/>
                     </div>
                 </div>
