@@ -21,7 +21,7 @@ const InventoryScreen = () => {
                             sold={product.sold}
                             commited={product.commited}
                             remaining={product.remaining}
-                            others={product.others}
+                            others={product.others.total}
                         />)
                 })}
 

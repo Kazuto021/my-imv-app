@@ -80,8 +80,11 @@ body {
   color: $secondary-color;
   text-align: center;
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // z-index: 99;
+  width: 100vw;
+  // bottom: 0;
+  
   width: 100%;
 }
 
