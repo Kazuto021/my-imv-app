@@ -10,6 +10,7 @@ import "../components/styles/navbar.scss";
 import MenuBar from "../components/MenuBar";
 import { useNavigate } from 'react-router-dom';
 import { LuLogOut } from "react-icons/lu";
+import { graphs } from '../util/Visualization';
 
 const Admin = () => {
   const nav = useNavigate()
@@ -22,8 +23,16 @@ const Admin = () => {
           <div className="navbar-top">
             <Navbar companyName={NavProps.CompanyName} />
           </div>
-          <div className="navbar-bottom">PRODUCTS</div>
-          <section className="user-information"></section>
+          <div className="navbar-bottom">Graphs</div>
+          <section className="user-information">
+            <div className='graph-grid'>
+              {graphs&&graphs.map((e)=>{
+                return(
+                  <img className="graphs" key={e.id} src={e.imgSrc} alt="" />
+                )
+              })}
+            </div>
+          </section>
         </div>
       </div>
     );
