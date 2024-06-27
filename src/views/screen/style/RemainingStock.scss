@@ -1,0 +1,50 @@
+// src/components/StockPage.scss
+$table-head-color:rgb(0, 0, 0);
+$table-head-accent:white;
+.stock-page {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  max-height: 100dvh;
+  max-width: 100;
+  .remaining-items {
+    overflow-y: scroll;
+    width: 100%;
+    table {
+      width: 100%;
+      thead{
+        .table-head{
+            color: $table-head-accent;
+
+            background-color: $table-head-color;
+
+        }
+      }
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .stock-item {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 1.5rem;
+        color: #555;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #777;
+      }
+    }
+  }
+}

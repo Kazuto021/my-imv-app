@@ -28,8 +28,7 @@ const MainRoutes = () => {
       <Route path='/testing' Component={Nav2} />
       <Route path='/inventory' Component={InventoryScreen} />
       <Route path='/ProductDetails' Component={ProductDetails}/>
-      <Route path='/rm-stock' Component={RemainingStock}/>
-
+      <Route path='/remaining-stock' Component={RemainingStock}/>
     </Routes>
   </BrowserRouter>
   )

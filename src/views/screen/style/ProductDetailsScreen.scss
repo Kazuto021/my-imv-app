@@ -189,6 +189,9 @@
 .flex-column {
   display: flex;
   flex-direction: column;
+  span{
+    align-items: center;
+  }
 }
 // @keyframes colorAnimation {
 //   to{

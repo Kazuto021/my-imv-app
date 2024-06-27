@@ -6,7 +6,13 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200,
+        others:{
+            total:200,
+            defective:50,
+            damaged:50,
+            returned:100,
+            
+        },
         img:`https://www.besolid.in/cdn/shop/files/19apr2024tayna00195.webp?v=1714797206&width=713` 
         // img:`lessreso.jpeg` 
     },
@@ -16,7 +22,13 @@ export const itemProps= [
         sold:1,
         commited: 5,
         remaining:3,
-        others:9, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+            
+        },
         // img:`lessreso2.jpg`
         img:`https://www.besolid.in/cdn/shop/files/Wine_AshGrey.jpg?v=1702893307&width=713`
     },
@@ -26,7 +38,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        }, 
         img:`https://www.besolid.in/cdn/shop/files/Yellow_Orange.jpg?v=1711968367&width=713`
     },
     {
@@ -35,7 +52,13 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+            
+        },
         img:`https://www.besolid.in/cdn/shop/files/023A1376.webp?v=1714992642&width=713`
     },
     {
@@ -44,7 +67,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        },
         img:`ask.jpeg`
     },
     {
@@ -53,7 +81,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        },
         img:`https://www.besolid.in/cdn/shop/files/023A1415.jpg?v=1714734586&width=713`
     },
     {
@@ -62,7 +95,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        },
         img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02731.jpg?v=1704273834&width=713`
     },
     {
@@ -71,7 +109,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        },
         img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02285.jpg?v=1698649294&width=713`
     },
     {
@@ -80,7 +123,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        }, 
         img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02483.jpg?v=1704273860&width=713`
     },
     {
@@ -89,7 +137,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:9,
+            defective:3,
+            damaged:3,
+            returned:3,
+        },
         img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02684.jpg?v=1704273498&width=713`
     },
     {
@@ -98,7 +151,12 @@ export const itemProps= [
         sold:1000,
         commited: 1200,
         remaining:100,
-        others:200, 
+        others:{
+            total:19,
+            defective:13,
+            damaged:4,
+            returned:2,
+        },
         img:`https://www.besolid.in/cdn/shop/files/White_NB_DGR.jpg?v=1712996711&width=713`
     },
 ]

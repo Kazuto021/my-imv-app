@@ -1,5 +1,5 @@
 const UserProp={
-    Username:"Tamatar",
+    Username:"Kazu",
     Status:"Idle",
     leftScale:'1',
     Height: "5rem",
