@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { redirect, useLocation, useNavigate } from 'react-router-dom';
 import { FaEdit } from "react-icons/fa";
 
+
+
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import MenuBar from '../components/MenuBar';
+import { NavProps } from '../util/NavBarUtil';
+
 import "./style/ProductDetailsScreen.scss"
 const ProductDetails = () => {
     let nav = useNavigate();
@@ -44,7 +51,7 @@ const ProductDetails = () => {
         e.preventDefault();
         setDisabledStatus(true);
         let cumSum = 0;
-    
+
         for (let key in text) {
             if (text[key] === "") {
                 setText((prevText) => ({
@@ -62,11 +69,11 @@ const ProductDetails = () => {
                 console.log(`After cumSum: ${cumSum}`);
             }
         }
-    
+
         if (
-            parseInt(text.sold) && 
-            parseInt(text.commited) && 
-            parseInt(text.remaining) && 
+            parseInt(text.sold) &&
+            parseInt(text.commited) &&
+            parseInt(text.remaining) &&
             parseInt(text.others)
         ) {
             console.log("if condition working");
@@ -75,7 +82,7 @@ const ProductDetails = () => {
         setTotal(cumSum);
         console.log("-------------------");
     };
-    
+
 
     if (!loaded) {
         return (
@@ -86,50 +93,55 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className='detail-wrapper flex-column'>
-            <h1>Product Details</h1>
+        <div className='detail-wrapper flex'>
+                <MenuBar/>
 
-            <div className='product-detail-card'>
-                <div className='product-left-info flex-column'>
-                    <div className="blur-class"></div>
-                    <div className="render-product-img" style={{ backgroundImage: `url(${myData.bgImg})` }} ></div>
-                    <h3>Total: {total === 0 ?
-                        (myData.sold + myData.commited + myData.remaining + myData.others)
-                        :
-                        (total)}</h3>
+            <div className='right'>
+                <Navbar companyName={NavProps.CompanyName}/>
+                <div className='container'>
+                    <h1>Product Details</h1>
 
-                </div>
-                {/* {
-                    myData&&myData.map
-                } */}
-                <div className='product-right-info flex-column'>
-                    <h2>{myData.name}</h2>
-                    <div className='quantity-info'>
-                        <div className='edit flex'>
-                            <FaEdit onClick={inpStatusSetter} id='icon' />
+                    <div className='product-detail-card'>
+                        <div className='product-left-info flex-column'>
+                            <div className="blur-class"></div>
+                            <div className="render-product-img" style={{ backgroundImage: `url(${myData.bgImg})` }} ></div>
+                            <h3>Total: {total === 0 ?
+                                (myData.sold + myData.commited + myData.remaining + myData.others)
+                                :
+                                (total)}</h3>
+
                         </div>
-                        <form action="" className='flex-column'>
-                            <span>
-                                <label htmlFor="sold">Sold:</label>
-                                <input id="sold" type="number" name="sold" onChange={textHandler} placeholder={myData.sold} value={text.sold} disabled={disabledStatus} />
-                            </span>
-                            <span>
-                                <label htmlFor="remaining">Remaining:</label>
-                                <input id="remaining" type="number" name="remaining" onChange={textHandler} placeholder={myData.remaining} value={text.remaining} disabled={disabledStatus} />
-                            </span>
-                            <span>
-                                <label htmlFor="commited">Commited:</label>
-                                <input id="commited" type="number" name="commited" onChange={textHandler} placeholder={myData.commited} value={text.commited} disabled={disabledStatus} />
+                        <div className='product-right-info flex-column'>
+                            <h2>{myData.name}</h2>
+                            <div className='quantity-info'>
+                                <div className='edit flex'>
+                                    <FaEdit onClick={inpStatusSetter} id='icon' />
+                                </div>
+                                <form action="" className='flex-column'>
+                                    <span>
+                                        <label htmlFor="sold">Sold:</label>
+                                        <input id="sold" type="number" name="sold" onChange={textHandler} placeholder={myData.sold} value={text.sold} disabled={disabledStatus} />
+                                    </span>
+                                    <span>
+                                        <label htmlFor="remaining">Remaining:</label>
+                                        <input id="remaining" type="number" name="remaining" onChange={textHandler} placeholder={myData.remaining} value={text.remaining} disabled={disabledStatus} />
+                                    </span>
+                                    <span>
+                                        <label htmlFor="commited">Commited:</label>
+                                        <input id="commited" type="number" name="commited" onChange={textHandler} placeholder={myData.commited} value={text.commited} disabled={disabledStatus} />
 
-                            </span>
-                            <span>
-                                <label htmlFor="others">Others:</label>
-                                <input id="others" type="Number" name="others" onChange={textHandler} placeholder={myData.others} value={text.others} disabled={disabledStatus} />
-                            </span>
-                            <button type='submit' onClick={submitHandler} disabled={disabledStatus}>Save</button>
-                        </form>
+                                    </span>
+                                    <span>
+                                        <label htmlFor="others">Others:</label>
+                                        <input id="others" type="Number" name="others" onChange={textHandler} placeholder={myData.others} value={text.others} disabled={disabledStatus} />
+                                    </span>
+                                    <button type='submit' onClick={submitHandler} disabled={disabledStatus}>Save</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <Footer />
             </div>
 
         </div>

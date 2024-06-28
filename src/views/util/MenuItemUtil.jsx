@@ -1,13 +1,14 @@
 export const menuItemProperties = {
-    productLogo:'productList.png',
+    productLogo:'product.png',
     productContent:"Products",
-    stockRemainingLogo:"Remainingstock.png",
+    stockRemainingLogo:"stock.png",
     remainingStockContent: "Remaining Stock",
-    totalStockLogo :'inventory.png',
+    totalStockLogo :'inventory-icon.png',
     totalStockContent:"Inventory",  
     managementContent:"Management",  
     productPage: "product",
     inventoryPage:"inventory",
     remainingStockPage: "remaining-stock",
+    managementLogo:'management.png',
     managementPage:"ProductDetails"
 }

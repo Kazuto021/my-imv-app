@@ -20,6 +20,7 @@ const Navbar = (props) => {
 
             } else {
                 document.getElementsByClassName("right")[0].style.display = 'flex';
+                document.getElementsByClassName("right")[0].style = 'column';
                 // document.getElementsByClassName("menu-item")[0].style.dis
                 leftElement.style.display = 'flex';
                 // leftElement.style.width = "40%";

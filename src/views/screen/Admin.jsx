@@ -11,39 +11,42 @@ import MenuBar from "../components/MenuBar";
 import { useNavigate } from 'react-router-dom';
 import { LuLogOut } from "react-icons/lu";
 import { graphs } from '../util/Visualization';
+import Footer from '../components/Footer';
 
 const Admin = () => {
   const nav = useNavigate()
   console.log(typeof localStorage.getItem("isLoggedIn"))
-  if(localStorage.getItem("isLoggedIn")==="true"){
+  if (localStorage.getItem("isLoggedIn") === "true") {
     return (
       <div className="admin-wrapper-class">
-        <MenuBar/>
+        <MenuBar />
         <div className="right">
           <div className="navbar-top">
             <Navbar companyName={NavProps.CompanyName} />
           </div>
-          <div className="navbar-bottom">Graphs</div>
+          <div className="navbar-bottom flex" style={{fontWeight:"300",fontSize:"2rem",letterSpacing:"0.1rem"}}>Graphs</div>
           <section className="user-information">
             <div className='graph-grid'>
-              {graphs&&graphs.map((e)=>{
-                return(
+              {graphs && graphs.map((e) => {
+                return (
                   <img className="graphs" key={e.id} src={e.imgSrc} alt="" />
                 )
               })}
             </div>
           </section>
+          <Footer/>
         </div>
+
       </div>
     );
-  }else{
-    return(
-      <div className='' style={{fontSize:"3rem"}} >
-        Please <span style={{color:'red',fontSize:"3rem",cursor:"pointer"}} onClick={()=>nav("/")}>Login/Register</span> first in order to start using Inventory Management App!
+  } else {
+    return (
+      <div className='' style={{ fontSize: "3rem" }} >
+        Please <span style={{ color: 'red', fontSize: "3rem", cursor: "pointer" }} onClick={() => nav("/")}>Login/Register</span> first in order to start using Inventory Management App!
       </div>
     )
 
-  
-};
+
+  };
 }
 export default Admin;

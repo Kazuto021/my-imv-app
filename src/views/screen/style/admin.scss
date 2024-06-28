@@ -11,7 +11,6 @@ $profile-pic: "mypic01.jpg";
   width: 100%;
   // border: 1px solid red;
 
-  
   .right {
     width: 20%;
     display: flex;
@@ -140,49 +139,54 @@ $profile-pic: "mypic01.jpg";
     width: 80%;
     text-align: center;
     .navbar-top {
-      height: 10%;
+      // height: 10%;
       display: flex;
       flex-direction: row;
+      width: 100%;
+      // border: 1px solid orange;
+      .navbar {
+        // justify-content: start;
+        width: 100%;
+        .inner-mid-portion{
+          flex-basis: 40%;
+        }
+      }
     }
     .navbar-bottom {
-      display: flex;
-      place-content: center;
+      justify-content: center;
       align-items: center;
       height: 5%;
+      width: 100%;
 
       border: 1px solid black;
     }
-    .user-information{
+    .user-information {
       height: min-content;
-
+      width: 100%;
       padding: 1rem;
       // border: 10px solid green;
-      .graph-grid{
-        display:grid ;
+      .graph-grid {
+       
+        display: grid;
         row-gap: 1rem;
         column-gap: 1rem;
-        grid-template-columns:repeat(2,1fr);
-        border: 2px solid peachpuff;
-        // align-items: center;
-        // justify-items: center;
-        place-items: center;
-        .graphs{
+        grid-template-columns: repeat(2, 1fr);
+        // border: 2px solid peachpuff;
 
-          // object-fit: cover;
+        place-items: center;
+        .graphs {
+          width: 100%;
+          // object-fit: contain;
           height: 300px;
-          // width: min-content;
           background-color: rgba(0, 0, 0, 0.324);
-          outline:1px solid  black;
+          outline: 1px solid black;
         }
       }
       // .graph-grid *{
-        
+
       //   border:2px solid black;
       // }
     }
-  }
-  .right * {
-    width: 100%;
   }
 
   .right::-webkit-scrollbar {
@@ -199,34 +203,34 @@ $profile-pic: "mypic01.jpg";
     .right {
       width: 100%;
     }
-  
+
     .left-portion {
       flex-basis: 20%;
     }
-  
+
     .mid-portion,
     .inner-mid-portion {
       overflow: scroll;
       padding: 0;
     }
-  
+
     .right-portion .profile-pic {
       display: none;
     }
-  
+
     .right-portion .user-detail {
       padding: 0;
       font-size: 1rem;
       overflow: hidden;
       // text-wrap: wrap;
     }
-  
+
     .navbar-bottom {
       margin: 0;
       height: 2rem;
       border: 2px solid black;
     }
-  
+
     .graph-grid {
       // grid-column: span auto;
       grid-template-columns: repeat(1, 1fr) !important;
@@ -239,38 +243,38 @@ $profile-pic: "mypic01.jpg";
     .right {
       width: 100%;
     }
-  
+
     .left-portion {
       flex-basis: 20%;
     }
-  
+
     .mid-portion,
     .inner-mid-portion {
       overflow: scroll;
       padding: 0;
     }
-  
+
     .profile-pic {
       display: none;
     }
-  
+
     .user-detail {
       padding: 0;
       font-size: 1rem;
     }
-  
+
     .navbar-bottom {
       margin: 0;
       height: 2rem;
       border: 2px solid black;
     }
-  
+
     .graph-grid {
       grid-column: span auto;
       // grid-template-columns: repeat(2, 1fr) !important;
     }
   }
-  
+
   // @media (min-width:1023px) and (max-width:1300px){
   //   .left{
 
