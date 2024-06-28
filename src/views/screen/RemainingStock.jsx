@@ -4,6 +4,10 @@ import MenuBar from '../components/MenuBar';
 import { itemProps } from '../util/InvItemUtil';
 import "./style/RemainingStock.scss";
 
+import Navbar from '../components/Navbar';
+import { NavProps } from '../util/NavBarUtil';
+import Footer from '../components/Footer';
+
 const RemainingStock = () => {
   const [stockData, setStockData] = useState({
     defective: 0,
@@ -29,7 +33,8 @@ const RemainingStock = () => {
   return (
     <div className="stock-page">
       <MenuBar />
-      <div className='remaining-items'>
+      <div className='remaining-items right'>
+        <Navbar companyName={NavProps.CompanyName} />
         <table border={1}>
           <thead>
             <tr className='table-head'>
@@ -56,7 +61,7 @@ const RemainingStock = () => {
                   <td>{product.others.damaged}</td>
                   <td>{product.others.returned}</td>
                   <td>{product.others.total}</td>
-                  
+
                 </tr>
 
               )
@@ -64,9 +69,7 @@ const RemainingStock = () => {
           </tbody>
 
         </table>
-        {/* <footer className="footer">
-          <p>&copy; 2024 Inventory Management App. All rights reserved.</p>
-        </footer> */}
+        <Footer/>
       </div>
 
     </div>

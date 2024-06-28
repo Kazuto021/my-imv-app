@@ -4,8 +4,8 @@ const UserProp={
     Status:"Idle",
     leftScale:'1',
     Height: "5rem",
-    width: "7.5rem",
-    rightScale:"1.5",
+    width: "5.5rem",
+    rightScale:"1.4",
     leftSideProfileStatus:"true",
     rightSideProfileStaus:"false"
     

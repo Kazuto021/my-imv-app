@@ -24,6 +24,11 @@ const MenuBar = () => {
             <Profile StatusRequirement={UserProp.leftSideProfileStatus} scale={UserProp.leftScale} />
             <div className="menu">
                 <div className="second-left-element">General</div>
+                <MenuItem
+                    source="dashboard.png"
+                    content="Dashboard"
+                    componentCalled="admin"
+                />
                 <a target="_self">
                     <MenuItem
                         source={menuItemProperties.productLogo}
@@ -42,7 +47,7 @@ const MenuBar = () => {
                     componentCalled={menuItemProperties.remainingStockPage}
                 />
                 <MenuItem
-                    source={menuItemProperties.stockRemainingLogo}
+                    source={menuItemProperties.managementLogo}
                     content={menuItemProperties.managementContent}
                     componentCalled={menuItemProperties.managementPage}
                 />

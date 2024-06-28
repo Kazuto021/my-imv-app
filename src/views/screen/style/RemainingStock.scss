@@ -10,6 +10,9 @@ $table-head-accent:white;
   .remaining-items {
     overflow-y: scroll;
     width: 100%;
+    .navbar{
+      height:10vh;
+    }
     table {
       width: 100%;
       thead{

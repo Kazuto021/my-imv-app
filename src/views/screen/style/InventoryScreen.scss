@@ -12,12 +12,18 @@
     background-color: rgb(0, 0, 0);
     // filter:contrast(1);
     
-
     .inventory-list{
+        overflow-y:scroll ;
+        padding: 0 !important;
+        .navbar{
+            height: 10%;
+        }
+    }
+    .inventory-card-list{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
         flex-direction: column ;
-        overflow-x: scroll;
+        overflow-y: scroll;
         
         // table{
         //     border:1px solid red;
@@ -45,9 +51,33 @@
 
 // }
 
+@media (max-width: 563px) {
+    .inventory-wrapper {
+        height: auto; // Adjust height for smaller screens
+        overflow-y: auto; // Ensure it scrolls if content overflows
 
+        .inventory-list {
+            width: 100vw;
+            .navbar{
+                height: 10vh;
+                width: 100%;
+                // .profile-pic{
+                //     display: none;
+                // }
+            }
+            // border:1px solid white;
+            // grid-row: span;
+            .inventory-card-list{
 
-@media (max-width: 633px) {
+                grid-template-columns: 1fr; // Change to single column layout on smaller screens
+            }
+            
+            padding: 1rem; // Added padding for better spacing
+        }
+    }
+}
+
+@media (min-width:563px) and (max-width: 893px) {
     .inventory-wrapper {
         height: auto; // Adjust height for smaller screens
         overflow-y: auto; // Ensure it scrolls if content overflows
@@ -56,22 +86,40 @@
             width: 100vw;
             // border:1px solid white;
             // grid-row: span;
-            grid-template-columns: 1fr; // Change to single column layout on smaller screens
+            .navbar{
+                height: 10vh;
+                width: 100%;
+
+                // flex-basis: 100px ;
+                // .inner-mid-portion{
+                //     width: 20%;
+                // }
+            }
+            .inventory-card-list{
+
+                grid-template-columns: repeat(2,1fr); // Change to single column layout on smaller screens
+            }
             
             padding: 1rem; // Added padding for better spacing
         }
     }
 }
 
-@media (min-width: 950px) and (max-width:1400px) {
+@media (min-width: 894px) and (max-width:1151px) {
     .inventory-wrapper {
         // height: 100vh; // Adjust height for smaller screens
         overflow-y: auto; // Ensure it scrolls if content overflows
 
         .inventory-list {
             width: 100vw;
+            // .navbar{
+            //     // height: 100vh;
+               
+            // }
             // border:1px solid white;
+            .inventory-card-list{
             grid-template-columns: repeat(3,1fr); // Change to single column layout on smaller screens
+            }
             padding: 1rem; // Added padding for better spacing
         }
     }
