@@ -65,6 +65,9 @@ $profile-pic: "mypic01.jpg";
   font-size: larger;
   font-weight: 600;
   text-align: start;
+  overflow: hidden;
+  word-wrap: break-word;
+  
 }
 .user-detail {
   font-size: 1.8rem;

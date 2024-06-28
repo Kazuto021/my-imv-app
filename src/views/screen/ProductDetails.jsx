@@ -41,30 +41,41 @@ const ProductDetails = () => {
 
     }
     const submitHandler = (e) => {
-        e.preventDefault()
-        setDisabledStatus(true)
-        let cumSum = 0
-        for (let i in text) {
-            console.log(i + " " + text[i])
-            if (text[i] === "") {
-                setText({
-                    ...text,
-                    i: myData[i]
-
-                })
-                console.log(myData[i])
-                cumSum += parseInt(myData[i])
+        e.preventDefault();
+        setDisabledStatus(true);
+        let cumSum = 0;
+    
+        for (let key in text) {
+            if (text[key] === "") {
+                setText((prevText) => ({
+                    ...prevText,
+                    [key]: myData[key]
+                }));
+                console.log(`Key: ${key}, Value from myData: ${myData[key]}`);
+                console.log(`Before cumSum: ${cumSum}`);
+                cumSum += parseInt(myData[key]) || 0; // Adding parseInt fallback to 0 if parsing fails
+                console.log(`After cumSum: ${cumSum}`);
             } else {
-                cumSum += parseInt(text[i])
+                console.log(`Key: ${key}, Value from text: ${text[key]}`);
+                console.log(`Before cumSum: ${cumSum}`);
+                cumSum += parseInt(text[key]) || 0; // Adding parseInt fallback to 0 if parsing fails
+                console.log(`After cumSum: ${cumSum}`);
             }
         }
-        if (parseInt(text.sold) & parseInt(text.commited) & parseInt(text.remaining) & parseInt(text.others)) {
-            console.log("if condition working   ")
-            
-            // setTotal(parseInt(text.sold) + parseInt(text.commited) + parseInt(text.remaining) + parseInt(text.others))
+    
+        if (
+            parseInt(text.sold) && 
+            parseInt(text.commited) && 
+            parseInt(text.remaining) && 
+            parseInt(text.others)
+        ) {
+            console.log("if condition working");
+            // setTotal(parseInt(text.sold) + parseInt(text.commited) + parseInt(text.remaining) + parseInt(text.others));
         }
-        setTotal(cumSum)
-    }
+        setTotal(cumSum);
+        console.log("-------------------");
+    };
+    
 
     if (!loaded) {
         return (
