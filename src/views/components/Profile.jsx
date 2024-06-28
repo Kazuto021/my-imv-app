@@ -2,7 +2,7 @@ import React from "react";
 import UserProp from "../util/UserProfile";
 const Profile = (props) => {
   return (
-    <div className="profile">
+    <div className="profile" style={{maxHeight:"10rem"}}>
       <div
         className="profile-pic"
         style={{height:props.height, width:props.width , scale:props.scale}}
