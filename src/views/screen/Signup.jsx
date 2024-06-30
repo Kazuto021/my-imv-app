@@ -18,19 +18,33 @@ const Signup = () => {
         nav("/")
     }
     function onClicksignup(e) {
-        for (var key in formData) {
-            localStorage.setItem(key, formData[key])
-            // console.log(key,formData[key])
-        }
         e.preventDefault();
-        alert("Signup button pressed")
+    
+        if (!formData.username || !formData.email || !formData.password) {
+            alert("All fields are required!");
+            return;
+        }
+    
+        if (formData.password.length < 8) {
+            alert("Password must be at least 8 characters long!");
+            return;
+        }
+
+        for (var key in formData) {
+            localStorage.setItem(key, formData[key]);
+        }
+    
+        alert("Signup successful!");
+    
         setFormData({
             username: "",
             email: "",
             password: "",
-        })
-        nav("/")
+        });
+    
+        nav("/");
     }
+    
     const formUpdater = (e) => {
         setFormData({
             ...formData,

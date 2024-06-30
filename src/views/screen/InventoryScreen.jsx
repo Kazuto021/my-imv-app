@@ -13,7 +13,7 @@ import Footer from '../components/Footer'
 const InventoryScreen = () => {
     return (
         <div className='inventory-wrapper'>
-
+            
             <MenuBar />
 
             <div className='inventory-list right'>
