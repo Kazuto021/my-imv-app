@@ -13,9 +13,9 @@ const ProductCards = (props) => {
         remaining: props.remaining,
         others: props.others
     });
-    useEffect(()=>{
-        console.table(data)
-    },[])
+    // useEffect(()=>{
+    //     console.table(data)
+    // },[])
     const onClickPrintData = (e)=>{
         nav("/ProductDetails",{state:{data}})
         console.log(e)

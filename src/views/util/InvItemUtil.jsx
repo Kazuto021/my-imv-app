@@ -63,7 +63,7 @@ export const itemProps= [
     },
     {
         id:5,
-        name:"Neon",
+        name:"Pink Lemonade Long skirt set",
         sold:1000,
         commited: 1200,
         remaining:100,
@@ -73,7 +73,7 @@ export const itemProps= [
             damaged:3,
             returned:3,
         },
-        img:`ask.jpeg`
+        img:`https://www.besolid.in/cdn/shop/files/17-10-2023nicol02887.jpg?v=1698668418&width=713`
     },
     {
         id:6,
