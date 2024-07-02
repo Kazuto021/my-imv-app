@@ -60,12 +60,12 @@ const ProductDetails = () => {
                 }));
                 console.log(`Key: ${key}, Value from myData: ${myData[key]}`);
                 console.log(`Before cumSum: ${cumSum}`);
-                cumSum += parseInt(myData[key]) || 0; // Adding parseInt fallback to 0 if parsing fails
+                cumSum += parseInt(myData[key]) || 0; 
                 console.log(`After cumSum: ${cumSum}`);
             } else {
                 console.log(`Key: ${key}, Value from text: ${text[key]}`);
                 console.log(`Before cumSum: ${cumSum}`);
-                cumSum += parseInt(text[key]) || 0; // Adding parseInt fallback to 0 if parsing fails
+                cumSum += parseInt(text[key]) || 0; 
                 console.log(`After cumSum: ${cumSum}`);
             }
         }

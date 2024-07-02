@@ -1,6 +1,6 @@
 $left-bg-color: #f5e8dd;
 $right-bg-color: white;
-$profile-pic: "mypic01.jpg";
+$profile-pic: "userIconMain.png";
 .left {
     
   width: 20%;
@@ -52,7 +52,8 @@ $profile-pic: "mypic01.jpg";
   height: 80px;
   width: 80px;
   text-align: center;
-  background-image: url("../../../assets/profile-pic/" + $profile-pic);
+  // background-image: url("../../../assets/profile-pic/" + $profile-pic);
+  background-image: url(""+$profile-pic);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
