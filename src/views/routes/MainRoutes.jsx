@@ -20,7 +20,6 @@ const MainRoutes = () => {
   return (
     <BrowserRouter>
     <Routes>
-      {/* <Route path='/' Component={MyApp} /> */}
       <Route path='/' Component={Login} />
       <Route path='/signup' Component={Signup} />
       <Route path='/admin' Component={Admin } />
